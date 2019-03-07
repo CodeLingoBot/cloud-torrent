@@ -10,7 +10,7 @@ import (
 	"github.com/elazarl/go-bindata-assetfs"
 )
 
-// all static/ files embedded as a Go library
+// FileSystemHandler: all static/ files embedded as a Go library
 func FileSystemHandler() http.Handler {
 	var h http.Handler
 	if info, err := os.Stat("static/files/"); err == nil && info.IsDir() {
